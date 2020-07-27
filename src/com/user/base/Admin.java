@@ -1,11 +1,11 @@
 package com.user.base;
 
+import com.hotPoint.HotPointListInterface;
 import com.scannerTool.ReadOption;
-import com.hotPoint.HotPointList;
 
 public class Admin extends User{
 
-    public Admin(HotPointList hotPointList) {
+    public Admin(HotPointListInterface hotPointList) {
         super(hotPointList);
     }
 

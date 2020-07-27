@@ -39,6 +39,22 @@ public class ReadOption {
     }
 
     /**
+     * 读取一个热搜排名号1-》
+     * @return 热搜排名号
+     */
+    public static int catOrderNumber() {
+        if(!sc.hasNext()){
+            throw new RuntimeException("Empty Order Error!");
+        }
+        int OrderNumber = sc.nextInt();
+        sc.nextLine();
+        if(OrderNumber<=0){
+            throw new RuntimeException("Wrong Order Error!");
+        }
+        return OrderNumber;
+    }
+
+    /**
      * 读取一个字符串
      * @return 字符串
      */

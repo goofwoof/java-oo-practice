@@ -1,11 +1,11 @@
 package com.user.base;
 
+import com.hotPoint.HotPointListInterface;
 import com.scannerTool.ReadOption;
-import com.hotPoint.HotPointList;
 
 public class Normal extends User{
     private int restVote = 10;
-    public Normal(HotPointList hotPointList) {
+    public Normal(HotPointListInterface hotPointList) {
         super(hotPointList);
     }
 
@@ -62,9 +62,9 @@ public class Normal extends User{
         try {
             int IDNumber = ReadOption.catIDNumber();
             System.out.println("请输入需要购买的热搜排名:");
-            int order = ReadOption.catIDNumber();
+            int order = ReadOption.catOrderNumber();
             System.out.println("请输入您的报价:");
-            int price = ReadOption.catIDNumber();
+            int price = ReadOption.catOrderNumber();
             if (this.buyHotPoint(IDNumber, price, order)) {
                 System.out.println("购买成功！");
             } else System.out.println("购买失败。");

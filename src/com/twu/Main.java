@@ -1,14 +1,15 @@
 package com.twu;
 
+import com.hotPoint.HotPointListIml;
+import com.hotPoint.HotPointListInterface;
 import com.scannerTool.ReadOption;
-import com.hotPoint.HotPointList;
 import com.user.base.Admin;
 import com.user.base.Normal;
 
 public class Main {
 
     public static void main(String[] args) {
-        HotPointList hotPointList = new HotPointList();
+        HotPointListInterface hotPointList = new HotPointListIml();
         while(true){
             System.out.println("-------------Welcome to HotPoint!-------------");
             System.out.println("请选择身份或退出:");

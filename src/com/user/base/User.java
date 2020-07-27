@@ -1,17 +1,17 @@
 package com.user.base;
 
+import com.hotPoint.HotPointListInterface;
 import com.scannerTool.ReadOption;
-import com.hotPoint.HotPointList;
 
 public class User {
 
-    private final HotPointList hotPointList;
+    private final HotPointListInterface hotPointList;
 
     /**
      * 构造函数
      * @param hotPointList 热搜列表对象
      */
-    public User(HotPointList hotPointList) {
+    public User(HotPointListInterface hotPointList) {
         this.hotPointList = hotPointList;
     }
 
@@ -34,7 +34,8 @@ public class User {
      * 获取热搜列表对象
      * @return HotPointList
      */
-    protected HotPointList getHotPointList(){
+
+    protected HotPointListInterface getHotPointList(){
         return this.hotPointList;
     }
 

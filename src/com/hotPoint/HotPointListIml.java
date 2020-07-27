@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class HotPointList {
+public class HotPointListIml implements HotPointListInterface {
     private int hotID = 0;
     //一个热搜可以由ID唯一确定，且只会存在于两个List的其中一个
     private final List<HotPoint> normalHotPoint = new ArrayList<>();
