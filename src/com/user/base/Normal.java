@@ -9,9 +9,9 @@ public class Normal extends User{
         super(hotPointList);
     }
 
-    protected boolean vote(int hotID) {
-        if(super.getHotPointList().voteHotPoint(hotID)){
-            restVote--;
+    protected boolean vote(int hotID, int votes) {
+        if(super.getHotPointList().voteHotPoint(hotID, votes)){
+            restVote -= votes;
             return true;
         }
         else return false;
@@ -79,7 +79,9 @@ public class Normal extends User{
         this.seeHotPoint();
         try {
             int IDNumber = ReadOption.catIDNumber();
-            if (this.vote(IDNumber)) {
+            System.out.println("请输入投票意愿数:");
+            int votes = ReadOption.catOptionNumber(this.restVote);
+            if (this.vote(IDNumber, votes)) {
                 System.out.println("投票成功！");
             } else System.out.println("投票失败。");
         }

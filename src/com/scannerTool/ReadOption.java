@@ -7,17 +7,20 @@ public class ReadOption {
 
     /**
      * 读取一个操作数
-     * @param MaxValue 0~MaxValue的操作允许范围
+     * @param MaxValue (0,MaxValue]的操作允许范围
      * @return 操作数
      */
     public static int catOptionNumber(int MaxValue){
         if(!sc.hasNext()){
-            throw new RuntimeException("Empty Option Error!");
+            throw new RuntimeException("Empty Input Error!");
         }
         int option = sc.nextInt();
         sc.nextLine();
-        if(option<=0 ||option>=MaxValue){
-            throw new RuntimeException("Wrong Option Error!");
+        if(option>=MaxValue){
+            throw new RuntimeException("Wrong Input Error (please smaller)!");
+        }
+        if(option<=0){
+            throw new RuntimeException("Wrong Input Error (please bigger)!");
         }
         return option;
     }

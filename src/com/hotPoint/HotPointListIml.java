@@ -41,13 +41,13 @@ public class HotPointListIml implements HotPointListInterface {
      * @param hotID 热搜ID
      * @return 投票结果
      */
-    public boolean voteHotPoint(int hotID) {
+    public boolean voteHotPoint(int hotID, int votes) {
         try {
             normalHotPoint.forEach(hotPoint -> {
-                if (hotID == hotPoint.getHotPointID()) hotPoint.vote();
+                if (hotID == hotPoint.getHotPointID()) hotPoint.vote(votes);
             });
             moneyHotPoint.forEach(hotPoint -> {
-                if (hotID == hotPoint.getHotPointID()) hotPoint.vote();
+                if (hotID == hotPoint.getHotPointID()) hotPoint.vote(votes);
             });
         } catch (Exception e) {
             e.printStackTrace();

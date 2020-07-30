@@ -25,11 +25,11 @@ public class HotPoint {
     /**
      * 为该热搜投票
      */
-    public void vote() {
+    public void vote(int votes) {
         if (superHotFlag){
-            hot += 2;
+            hot += 2 * votes;
         }
-        else hot++;
+        else hot += votes;
     }
 
     public int getHot() {
